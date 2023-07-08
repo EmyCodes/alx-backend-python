@@ -7,5 +7,5 @@ def make_multiplier(multiplier: float) -> Callable[[float], float]:
     def multiply_(value: float) -> float:
         """"Inner function multiplies outer"""
         return value * multiplier
-    
+
     return multiply_
