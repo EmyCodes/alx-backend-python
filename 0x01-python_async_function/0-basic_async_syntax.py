@@ -12,13 +12,13 @@ async def wait_random(max_delay=10):
     await asyncio.sleep(delay)
     return delay
 
-async def main():
-    """Passing the coroutine here"""
-    await asyncio.gather(
-        wait_random(),
-        wait_random(),
-        wait_random()
-    )
+# async def main():
+#     """Passing the coroutine here"""
+#     await asyncio.gather(
+#         wait_random(),
+#         wait_random(),
+#         wait_random()
+#     )
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.wait_random()
