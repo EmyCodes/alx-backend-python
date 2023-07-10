@@ -10,13 +10,14 @@ async def wait_random(max_delay=10):
     (included and float value) seconds and eventually returns it."""
     delay = uniform(0, max_delay)
     await asyncio.sleep(delay)
+    return delay
 
 async def main():
     """Passing the coroutine here"""
     await asyncio.gather(
         wait_random(),
-        wait_random(5),
-        wait_random(15)
+        wait_random(),
+        wait_random()
     )
 
 if __name__ == "__main__":
